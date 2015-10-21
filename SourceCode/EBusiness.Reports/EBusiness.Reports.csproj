@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DA835F51-4CA3-4C1E-BEA7-AC8474CA1A30}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EBusiness.Reports</RootNamespace>
+    <AssemblyName>EBusiness.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CurrentCashReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrentCashReport.Designer.cs">
+      <DependentUpon>CurrentCashReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DailySalesPurchaseReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DailySalesPurchaseReport.Designer.cs">
+      <DependentUpon>DailySalesPurchaseReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EBusinessDataSet.cs">
+      <DependentUpon>EBusinessDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EBusinessDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EBusinessDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductTransactionReportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProductTransactionReportControl.Designer.cs">
+      <DependentUpon>ProductTransactionReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitLossReportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProfitLossReportControl.Designer.cs">
+      <DependentUpon>ProfitLossReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportControl.Designer.cs">
+      <DependentUpon>ReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsApp.Designer.cs">
+      <DependentUpon>ReportsApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Viewer.Designer.cs">
+      <DependentUpon>Report_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesPurchaseReportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SalesPurchaseReportControl.Designer.cs">
+      <DependentUpon>SalesPurchaseReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionReportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransactionReportControl.Designer.cs">
+      <DependentUpon>TransactionReportControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CurrentCashReport.resx">
+      <DependentUpon>CurrentCashReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailySalesPurchaseReport.resx">
+      <DependentUpon>DailySalesPurchaseReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductTransactionReportControl.resx">
+      <DependentUpon>ProductTransactionReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitLossReportControl.resx">
+      <DependentUpon>ProfitLossReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportControl.resx">
+      <DependentUpon>ReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsApp.resx">
+      <DependentUpon>ReportsApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_BuyerLedger.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_CompanyPurchase.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_CompanyTransaction.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_CustomerSale.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_CustomerSaleDetailed.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_CustomerTransaction.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_DailyProductSalePurchaseSummary.rdlc" />
+    <EmbeddedResource Include="Report_ProductInOutDetail.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_ProductInOutSummary.rdlc" />
+    <EmbeddedResource Include="Report_ProductPurchase.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_ProductSale.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Viewer.resx">
+      <DependentUpon>Report_Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesPurchaseReportControl.resx">
+      <DependentUpon>SalesPurchaseReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionReportControl.resx">
+      <DependentUpon>TransactionReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="EBusinessDataSet.xsc">
+      <DependentUpon>EBusinessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EBusinessDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EBusinessDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EBusinessDataSet.xss">
+      <DependentUpon>EBusinessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EBusiness.BLL\EBusiness.BLL.csproj">
+      <Project>{3B88273C-26C9-458E-B8C3-361786FC3A45}</Project>
+      <Name>EBusiness.BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
